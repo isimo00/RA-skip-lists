@@ -1,0 +1,6 @@
+# executables
+*
+!*.*
+!*/
+.DS_Store
+!compiler
