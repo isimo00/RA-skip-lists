@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <vector>
 #include <cstdlib>
 using namespace std;
@@ -48,10 +49,11 @@ int Dictionary<Key,Value>::lookup_skip_list(node_skip_list* p, int l, const Key&
 				p=p -> _next[l];
 		if (p -> _next[0] == nullptr or p -> _next[0] -> _k !=k){
 		// k is not present
-			return nullptr;}
+			return 0; // return nullptr
+			}
 		else // k is present
-		      	return p -> _next[0];
-	}
+		    return p -> _next[0];
+}
 
 // diapo 27
 
@@ -85,3 +87,8 @@ void Dictionary<Key,Value>::insert_skip_list(const Key& k, Value& v, int _height
 	else // k is present
 	     	p-> _next[0] -> _v=v;
 }}
+
+int main(){
+	int a=1;
+	printf("a is %i", a);
+}
