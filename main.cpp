@@ -13,8 +13,7 @@ int main () {
 	srand((unsigned) time(NULL));
 	// Run for different n
 	int max_n = 15;
-	//for (int n=200; n=<20000; n = n+100){
-	for (int n=10; n<=max_n; n++){
+	for (int n=200; n=<20000; n = n+100){
 		Skip_list<int, int> sl(0.3); // while rng > q, increase. p: prob of stopping.
 		for (int element=1; element <= n; element++)
 			sl.insert(element, element);
@@ -33,8 +32,7 @@ int main () {
 
 	// Run for different q
 	// Run for different n
-        int size = 10; 
-        //for (int n=200; n=<20000; n = n+100){
+        int size = 200; 
         for (int i=1; i<=19; i++){
 		double alpha = (0.05)*i;
                 Skip_list<int, int> sl(alpha); // while rng > q, increase. p: prob of stopping.
